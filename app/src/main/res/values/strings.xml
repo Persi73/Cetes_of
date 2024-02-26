@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Cetes</string>
+    <string name="ganancia">Ganancia</string>
+    <string name="interes">Interes</string>
 </resources>
