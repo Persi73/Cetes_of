@@ -9,12 +9,11 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import android.annotation.SuppressLint
 
 
-class principal : AppCompatActivity() {
-    lateinit var recycler: RecyclerView
-    lateinit var adapter: MesAdapter
+class MainActivity : AppCompatActivity() {
+    private lateinit var recycler: RecyclerView
+    private lateinit var adapter: MesAdapter
     private val MesViewModel:MesViewModel by viewModels()
     lateinit var monto:EditText
     var progreso:Int = 0
@@ -71,7 +70,7 @@ class principal : AppCompatActivity() {
             var intCant:Float
             for (i in 0..progreso){
                 if(i!=0){
-                    intCant= (cantidad*(1+(porcentaje/100))).toFloat()
+                    intCant= (cantidad*(1+(porcentaje/100)))
                     MesViewModel.elementos.add(Mes(i,intCant,intCant-cantidad,porcentaje))
                     cantidad=intCant
                 }
